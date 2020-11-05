@@ -5,6 +5,7 @@ object Version {
 object ProjectConfig {
     const val GRADLE = "com.android.tools.build:gradle:4.2.0-alpha15"
     const val KOTLIN_GRADLE_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Version.KOTLIN}"
+    const val ANDROID_JUNIT5 = "de.mannodermaus.gradle.plugins:android-junit5:1.6.2.0"
 }
 
 object AndroidConfig {
@@ -21,4 +22,11 @@ object Dependencies {
     const val CORE_KTX = "androidx.core:core-ktx:1.3.0"
     const val MATERIAL = "com.google.android.material:material:1.1.0"
     const val CONSTRAINT_LAYOUT = "androidx.constraintlayout:constraintlayout:2.0.1"
+}
+
+object TestConfig {
+    private const val JUNIT_VERSION = "5.7.0"
+
+    const val JUNIT_JUPITER_API = "org.junit.jupiter:junit-jupiter-api:$JUNIT_VERSION"
+    const val JUNIT_JUPITER_ENGINE = "org.junit.jupiter:junit-jupiter-engine:$JUNIT_VERSION"
 }

@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id "de.mannodermaus.android-junit5"
 }
 
 android {
@@ -30,6 +31,7 @@ android {
     }
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
+        test.java.srcDirs += 'src/test/kotlin'
     }
 }
 
@@ -37,4 +39,7 @@ dependencies {
     implementation Dependencies.KOTLIN_STDLIB
     implementation Dependencies.MATERIAL
     implementation Dependencies.CONSTRAINT_LAYOUT
+
+    testImplementation TestConfig.JUNIT_JUPITER_API
+    testRuntimeOnly TestConfig.JUNIT_JUPITER_ENGINE
 }
