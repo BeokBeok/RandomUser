@@ -29,4 +29,5 @@ object TestConfig {
 
     const val JUNIT_JUPITER_API = "org.junit.jupiter:junit-jupiter-api:$JUNIT_VERSION"
     const val JUNIT_JUPITER_ENGINE = "org.junit.jupiter:junit-jupiter-engine:$JUNIT_VERSION"
+    const val ASSERTJ_CORE = "org.assertj:assertj-core:3.18.0"
 }
