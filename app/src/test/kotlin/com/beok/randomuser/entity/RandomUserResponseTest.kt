@@ -15,4 +15,14 @@ class RandomUserResponseTest {
         assertThat(response.results.size).isEqualTo(1)
         assertThat(response.info.results).isEqualTo(1)
     }
+
+    @Test
+    fun `필드값에 null 이 있는 경우 기본값으로 초기화합니다`() {
+        val response = Json {
+            coerceInputValues = true
+        }.decodeFromString<RandomUserResponse>(MockData.NULL_VALUE_CONTAINED_JSON)
+
+        assertThat(response.results.size).isEqualTo(1)
+        assertThat(response.info.results).isEqualTo(1)
+    }
 }

@@ -4,6 +4,6 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class RandomUserResponse(
-	val results: List<ResultsItem>,
-	val info: Info
+	val results: List<ResultsItem> = emptyList(),
+	val info: Info = Info()
 )
