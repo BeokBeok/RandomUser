@@ -25,4 +25,14 @@ class RandomUserResponseTest {
         assertThat(response.results.size).isEqualTo(1)
         assertThat(response.info.results).isEqualTo(1)
     }
+
+    @Test
+    fun `멀티 타입을 제공하는 변수 (postcode 필드) 는 무시합니다`() {
+        val response = Json {
+            ignoreUnknownKeys = true
+        }.decodeFromString<RandomUserResponse>(MockData.MIXED_TYPE_JSON)
+
+        assertThat(response.results.size).isEqualTo(2)
+        assertThat(response.info.results).isEqualTo(2)
+    }
 }
