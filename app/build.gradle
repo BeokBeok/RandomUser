@@ -43,6 +43,7 @@ dependencies {
     implementation Dependencies.MATERIAL
     implementation Dependencies.CONSTRAINT_LAYOUT
     implementation Dependencies.SERIALIZATION_JSON
+    implementation Dependencies.COROUTINES
 
     implementation NetworkConfig.RETROFIT
     implementation NetworkConfig.LOGGING_INTERCEPTOR
@@ -50,7 +51,6 @@ dependencies {
 
     implementation HiltConfig.HILT_ANDROID
     kapt HiltConfig.HILT_ANDROID_COMPILER
-
     implementation HiltConfig.HILT_LIFECYCLE_VM
     kapt HiltConfig.HILT_COMPILER
 

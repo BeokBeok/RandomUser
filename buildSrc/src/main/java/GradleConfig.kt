@@ -27,6 +27,7 @@ object Dependencies {
     const val MATERIAL = "com.google.android.material:material:1.1.0"
     const val CONSTRAINT_LAYOUT = "androidx.constraintlayout:constraintlayout:2.0.1"
     const val SERIALIZATION_JSON = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1"
+    const val COROUTINES = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1"
 }
 
 object TestConfig {
