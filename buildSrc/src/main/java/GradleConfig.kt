@@ -1,5 +1,6 @@
 object Version {
     const val KOTLIN = "1.4.10"
+    const val HILT = "2.29.1-alpha"
 }
 
 object ProjectConfig {
@@ -7,6 +8,8 @@ object ProjectConfig {
     const val KOTLIN_GRADLE_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Version.KOTLIN}"
     const val ANDROID_JUNIT5 = "de.mannodermaus.gradle.plugins:android-junit5:1.6.2.0"
     const val KOTLIN_SERIALIZATION = "org.jetbrains.kotlin:kotlin-serialization:${Version.KOTLIN}"
+    const val HILT_ANDROID_GRADLE_PLUGIN =
+        "com.google.dagger:hilt-android-gradle-plugin:${Version.HILT}"
 }
 
 object AndroidConfig {
@@ -41,4 +44,14 @@ object NetworkConfig {
     const val LOGGING_INTERCEPTOR = "com.squareup.okhttp3:logging-interceptor:4.9.0"
     const val SERIALIZATION_CONVERTER =
         "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0"
+}
+
+object HiltConfig {
+    private const val HILT_JETPACK_VER = "1.0.0-alpha02"
+
+    const val HILT_ANDROID = "com.google.dagger:hilt-android:${Version.HILT}"
+    const val HILT_ANDROID_COMPILER = "com.google.dagger:hilt-android-compiler:${Version.HILT}"
+
+    const val HILT_LIFECYCLE_VM = "androidx.hilt:hilt-lifecycle-viewmodel:$HILT_JETPACK_VER"
+    const val HILT_COMPILER = "androidx.hilt:hilt-compiler:$HILT_JETPACK_VER"
 }

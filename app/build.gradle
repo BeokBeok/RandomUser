@@ -1,8 +1,10 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id "de.mannodermaus.android-junit5"
-    id "org.jetbrains.kotlin.plugin.serialization"
+    id 'kotlin-kapt'
+    id 'de.mannodermaus.android-junit5'
+    id 'org.jetbrains.kotlin.plugin.serialization'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -45,6 +47,12 @@ dependencies {
     implementation NetworkConfig.RETROFIT
     implementation NetworkConfig.LOGGING_INTERCEPTOR
     implementation NetworkConfig.SERIALIZATION_CONVERTER
+
+    implementation HiltConfig.HILT_ANDROID
+    kapt HiltConfig.HILT_ANDROID_COMPILER
+
+    implementation HiltConfig.HILT_LIFECYCLE_VM
+    kapt HiltConfig.HILT_COMPILER
 
     testImplementation TestConfig.JUNIT_JUPITER_API
     testRuntimeOnly TestConfig.JUNIT_JUPITER_ENGINE
