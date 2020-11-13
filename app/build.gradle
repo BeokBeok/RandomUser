@@ -42,6 +42,10 @@ dependencies {
     implementation Dependencies.CONSTRAINT_LAYOUT
     implementation Dependencies.SERIALIZATION_JSON
 
+    implementation NetworkConfig.RETROFIT
+    implementation NetworkConfig.LOGGING_INTERCEPTOR
+    implementation NetworkConfig.SERIALIZATION_CONVERTER
+
     testImplementation TestConfig.JUNIT_JUPITER_API
     testRuntimeOnly TestConfig.JUNIT_JUPITER_ENGINE
     testImplementation TestConfig.ASSERTJ_CORE

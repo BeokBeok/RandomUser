@@ -33,3 +33,12 @@ object TestConfig {
     const val JUNIT_JUPITER_ENGINE = "org.junit.jupiter:junit-jupiter-engine:$JUNIT_VERSION"
     const val ASSERTJ_CORE = "org.assertj:assertj-core:3.18.0"
 }
+
+object NetworkConfig {
+    private const val RETROFIT_VER = "2.9.0"
+
+    const val RETROFIT = "com.squareup.retrofit2:retrofit:$RETROFIT_VER"
+    const val LOGGING_INTERCEPTOR = "com.squareup.okhttp3:logging-interceptor:4.9.0"
+    const val SERIALIZATION_CONVERTER =
+        "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0"
+}
