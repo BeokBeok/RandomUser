@@ -1,4 +1,4 @@
-package com.beok.randomuser.entity
+package com.beok.randomuser.data
 
 import com.beok.randomuser.MockData
 import kotlinx.serialization.decodeFromString
