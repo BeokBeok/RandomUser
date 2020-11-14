@@ -22,11 +22,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Run Tests
-        run: ./gradlew test
-
       - name: Build Project
         run: ./gradlew assemble
+
+      - name: Run jacoco
+        run: ./gradlew jacocoTestReport
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1.0.14
