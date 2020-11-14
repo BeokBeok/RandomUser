@@ -7,6 +7,8 @@ plugins {
     id 'dagger.hilt.android.plugin'
 }
 
+apply from: '../jacoco.gradle'
+
 android {
     compileSdkVersion AndroidConfig.COMPILE_SDK
 

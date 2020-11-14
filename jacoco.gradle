@@ -1,0 +1,29 @@
+apply plugin: 'jacoco'
+
+jacoco {
+    toolVersion = "0.8.6"
+}
+
+task jacocoTestReport(type: JacocoReport, dependsOn: 'testDebugUnitTest') {
+
+    def coverageSourceDirs = ['src/main/kotlin']
+    additionalClassDirs.from = files(coverageSourceDirs)
+    sourceDirectories.from = files(coverageSourceDirs)
+
+    classDirectories.from = fileTree(
+            dir: "$buildDir/tmp/kotlin-classes/debug",
+            excludes: [
+                    '**/R.class',
+                    '**/R$*.class',
+                    '**/BuildConfig.*',
+                    '**/Manifest*.*',
+                    'com/android/**/*.class',
+            ]
+    )
+    executionData.from = files("$buildDir/jacoco/testDebugUnitTest.exec")
+
+    reports {
+        xml.enabled = true
+        html.enabled = true
+    }
+}
