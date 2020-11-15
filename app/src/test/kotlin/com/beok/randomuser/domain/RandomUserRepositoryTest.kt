@@ -2,7 +2,6 @@ package com.beok.randomuser.domain
 
 import com.beok.randomuser.data.RandomUserResponse
 import io.mockk.coEvery
-import io.mockk.coVerify
 import io.mockk.mockk
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Assertions.assertEquals
@@ -31,9 +30,6 @@ class RandomUserRepositoryTest {
         val result = repository
             .fetchUsers(numberOfUser)
             .getOrNull()
-        coVerify {
-            remoteDataSource.fetchUsers(numberOfUser)
-        }
         assertEquals(mockResponse, result)
     }
 }
