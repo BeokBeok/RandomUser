@@ -62,7 +62,7 @@ dependencies {
     kapt HiltConfig.HILT_COMPILER
 
     implementation ConverterConfig.MOSHI_KOTLIN
-    implementation ConverterConfig.MOSHI_KOTLIN_CODEGEN
+    kapt ConverterConfig.MOSHI_KOTLIN_CODEGEN
 
     testImplementation TestConfig.JUNIT_JUPITER_API
     testRuntimeOnly TestConfig.JUNIT_JUPITER_ENGINE
