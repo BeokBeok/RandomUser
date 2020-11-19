@@ -57,6 +57,9 @@ dependencies {
     implementation HiltConfig.HILT_LIFECYCLE_VM
     kapt HiltConfig.HILT_COMPILER
 
+    implementation ConverterConfig.MOSHI_KOTLIN
+    implementation ConverterConfig.MOSHI_KOTLIN_CODEGEN
+
     testImplementation TestConfig.JUNIT_JUPITER_API
     testRuntimeOnly TestConfig.JUNIT_JUPITER_ENGINE
     testImplementation TestConfig.JUNIT_JUPITER_PARAMS

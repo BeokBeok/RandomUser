@@ -4,7 +4,7 @@ object Version {
 }
 
 object ProjectConfig {
-    const val GRADLE = "com.android.tools.build:gradle:4.2.0-alpha15"
+    const val GRADLE = "com.android.tools.build:gradle:4.2.0-alpha16"
     const val KOTLIN_GRADLE_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Version.KOTLIN}"
     const val ANDROID_JUNIT5 = "de.mannodermaus.gradle.plugins:android-junit5:1.6.2.0"
     const val KOTLIN_SERIALIZATION = "org.jetbrains.kotlin:kotlin-serialization:${Version.KOTLIN}"
@@ -47,6 +47,7 @@ object NetworkConfig {
     const val LOGGING_INTERCEPTOR = "com.squareup.okhttp3:logging-interceptor:4.9.0"
     const val SERIALIZATION_CONVERTER =
         "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0"
+    const val CONVERTER_MOSHI = "com.squareup.retrofit2:converter-moshi:$RETROFIT_VER"
 }
 
 object HiltConfig {
@@ -57,4 +58,11 @@ object HiltConfig {
 
     const val HILT_LIFECYCLE_VM = "androidx.hilt:hilt-lifecycle-viewmodel:$HILT_JETPACK_VER"
     const val HILT_COMPILER = "androidx.hilt:hilt-compiler:$HILT_JETPACK_VER"
+}
+
+object ConverterConfig {
+    private const val MOSHI_VER = "1.11.0"
+
+    const val MOSHI_KOTLIN = "com.squareup.moshi:moshi-kotlin:$MOSHI_VER"
+    const val MOSHI_KOTLIN_CODEGEN = "com.squareup.moshi:moshi-kotlin-codegen:$MOSHI_VER"
 }
