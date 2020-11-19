@@ -3,7 +3,6 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'de.mannodermaus.android-junit5'
-    id 'org.jetbrains.kotlin.plugin.serialization'
     id 'dagger.hilt.android.plugin'
 }
 
@@ -49,12 +48,11 @@ dependencies {
     implementation Dependencies.KOTLIN_STDLIB
     implementation Dependencies.MATERIAL
     implementation Dependencies.CONSTRAINT_LAYOUT
-    implementation Dependencies.SERIALIZATION_JSON
     implementation Dependencies.COROUTINES
 
     implementation NetworkConfig.RETROFIT
     implementation NetworkConfig.LOGGING_INTERCEPTOR
-    implementation NetworkConfig.SERIALIZATION_CONVERTER
+    implementation NetworkConfig.CONVERTER_MOSHI
 
     implementation HiltConfig.HILT_ANDROID
     kapt HiltConfig.HILT_ANDROID_COMPILER

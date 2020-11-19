@@ -1,9 +1,12 @@
 package com.beok.randomuser.data
 
-import kotlinx.serialization.Serializable
+import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
-@Serializable
+@JsonClass(generateAdapter = true)
 data class Id(
+	@Json(name = "name")
 	val name: String = "",
+	@Json(name = "value")
 	val value: String = ""
 )

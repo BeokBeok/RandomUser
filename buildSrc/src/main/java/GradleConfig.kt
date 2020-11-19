@@ -7,7 +7,6 @@ object ProjectConfig {
     const val GRADLE = "com.android.tools.build:gradle:4.2.0-alpha16"
     const val KOTLIN_GRADLE_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Version.KOTLIN}"
     const val ANDROID_JUNIT5 = "de.mannodermaus.gradle.plugins:android-junit5:1.6.2.0"
-    const val KOTLIN_SERIALIZATION = "org.jetbrains.kotlin:kotlin-serialization:${Version.KOTLIN}"
     const val HILT_ANDROID_GRADLE_PLUGIN =
         "com.google.dagger:hilt-android-gradle-plugin:${Version.HILT}"
 }
@@ -26,7 +25,6 @@ object Dependencies {
     const val CORE_KTX = "androidx.core:core-ktx:1.3.0"
     const val MATERIAL = "com.google.android.material:material:1.1.0"
     const val CONSTRAINT_LAYOUT = "androidx.constraintlayout:constraintlayout:2.0.1"
-    const val SERIALIZATION_JSON = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1"
     const val COROUTINES = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1"
 }
 
@@ -45,8 +43,6 @@ object NetworkConfig {
 
     const val RETROFIT = "com.squareup.retrofit2:retrofit:$RETROFIT_VER"
     const val LOGGING_INTERCEPTOR = "com.squareup.okhttp3:logging-interceptor:4.9.0"
-    const val SERIALIZATION_CONVERTER =
-        "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0"
     const val CONVERTER_MOSHI = "com.squareup.retrofit2:converter-moshi:$RETROFIT_VER"
 }
 

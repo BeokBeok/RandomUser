@@ -1,10 +1,14 @@
 package com.beok.randomuser.data
 
-import kotlinx.serialization.Serializable
+import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
-@Serializable
+@JsonClass(generateAdapter = true)
 data class Picture(
+	@Json(name = "thumbnail")
 	val thumbnail: String = "",
+	@Json(name = "large")
 	val large: String = "",
+	@Json(name = "medium")
 	val medium: String = ""
 )

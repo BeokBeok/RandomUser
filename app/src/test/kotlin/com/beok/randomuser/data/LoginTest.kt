@@ -1,15 +1,29 @@
 package com.beok.randomuser.data
 
+import com.squareup.moshi.JsonAdapter
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
 class LoginTest {
 
+    private val moshi = Moshi.Builder()
+        .add(KotlinJsonAdapterFactory())
+        .build()
+    private lateinit var jsonAdapter: JsonAdapter<Login>
+
+    @BeforeEach
+    fun setup() {
+        jsonAdapter = moshi.adapter(Login::class.java)
+    }
+
     @Test
     fun `Login 관련 Json 을 엔티티로 변환합니다`() {
-        val response = Json.decodeFromString<Login>(LOGIN_JSON)
+        val response = jsonAdapter.fromJson(LOGIN_JSON) ?: Login()
 
         assertThat(response.uuid).isEqualTo("9197d721-8670-4157-add3-c01d4829652f")
         assertThat(response.username).isEqualTo("brownrabbit100")

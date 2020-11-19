@@ -1,15 +1,29 @@
 package com.beok.randomuser.data
 
+import com.squareup.moshi.JsonAdapter
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
 class LocationTest {
 
+    private val moshi = Moshi.Builder()
+        .add(KotlinJsonAdapterFactory())
+        .build()
+    private lateinit var jsonAdapter: JsonAdapter<Location>
+
+    @BeforeEach
+    fun setup() {
+        jsonAdapter = moshi.adapter(Location::class.java)
+    }
+
     @Test
     fun `Location 관련 Json 을 엔티티로 변환합니다`() {
-        val response = Json.decodeFromString<Location>(LOCATION_JSON)
+        val response = jsonAdapter.fromJson(LOCATION_JSON) ?: Location()
 
         assertThat(response.city).isEqualTo("Cambridge")
         assertThat(response.state).isEqualTo("Cleveland")
