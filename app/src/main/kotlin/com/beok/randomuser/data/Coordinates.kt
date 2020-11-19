@@ -1,12 +1,12 @@
 package com.beok.randomuser.data
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
+import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
-@Serializable
+@JsonClass(generateAdapter = true)
 data class Coordinates(
-	@SerialName("latitude")
+	@Json(name = "latitude")
 	val latitude: String = "",
-	@SerialName("longitude")
+	@Json(name = "longitude")
 	val longitude: String = ""
 )
