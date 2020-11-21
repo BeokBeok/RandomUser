@@ -33,3 +33,10 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           file: ./app/build/reports/jacoco/jacocoTestReport/jacocoTestReport.xml
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v2
+        with:
+          name: app
+          path: |
+            - app/build/outputs/apk/debug
