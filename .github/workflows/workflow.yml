@@ -42,6 +42,6 @@ jobs:
 
       - name: Deploy APK in Slack
         run: |
-          curl https://slack.com/api/files.upload -F token="$SLACK_TOKEN" -F channels="test-study" -F title="디버그 배포" -F filename="app-debug" -F file="@app/build/outputs/apk/debug/app-debug.apk"
-          curl https://slack.com/api/files.upload -F token="$SLACK_TOKEN" -F channels="test-study" -F title="릴리즈 배포" -F filename="app-release-unsigned" -F file="@app/build/outputs/apk/release/app-release-unsigned.apk"
+          curl https://slack.com/api/files.upload -F token=${{ secrets.SLACK_TOKEN }} -F channels="test-study" -F title="디버그 배포" -F filename="app-debug" -F file="@app/build/outputs/apk/debug/app-debug.apk"
+          curl https://slack.com/api/files.upload -F token=${{ secrets.SLACK_TOKEN }} -F channels="test-study" -F title="릴리즈 배포" -F filename="app-release-unsigned" -F file="@app/build/outputs/apk/release/app-release-unsigned.apk"
           
