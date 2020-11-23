@@ -28,11 +28,12 @@ class CoordinatesTest {
     }
 
     companion object {
-        private const val COORDINATES_JSON = """
-            {
-               "latitude":"14.4031",
-               "longitude":"57.7706"
-            }
-        """
+        private const val COORDINATES_JSON =
+            """
+                {
+                   "latitude":"14.4031",
+                   "longitude":"57.7706"
+                }
+            """
     }
 }

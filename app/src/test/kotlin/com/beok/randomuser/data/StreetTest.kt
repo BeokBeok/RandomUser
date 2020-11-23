@@ -28,11 +28,12 @@ class StreetTest {
     }
 
     companion object {
-        private const val STREET_JSON = """
-            {
-               "number":8409,
-               "name":"Mill Road"
-            }
-        """
+        private const val STREET_JSON =
+            """
+                {
+                   "number":8409,
+                   "name":"Mill Road"
+                }
+            """
     }
 }

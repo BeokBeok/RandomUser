@@ -9,5 +9,5 @@ interface RandomUserRemoteDataSource {
     val ioDispatcher: CoroutineDispatcher
         get() = Dispatchers.IO
 
-    suspend fun fetchUsers(results: Int) : RandomUserResponse
+    suspend fun fetchUsers(results: Int): RandomUserResponse
 }

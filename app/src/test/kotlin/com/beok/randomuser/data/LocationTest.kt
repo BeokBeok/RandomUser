@@ -29,24 +29,25 @@ class LocationTest {
     }
 
     companion object {
-        private const val LOCATION_JSON = """
-            {
-                "street":{
-                   "number":8409,
-                   "name":"Mill Road"
-                },
-                "city":"Cambridge",
-                "state":"Cleveland",
-                "country":"United Kingdom",
-                "coordinates":{
-                   "latitude":"14.4031",
-                   "longitude":"57.7706"
-                },
-                "timezone":{
-                   "offset":"0:00",
-                   "description":"Western Europe Time, London, Lisbon, Casablanca"
+        private const val LOCATION_JSON =
+            """
+                {
+                    "street":{
+                       "number":8409,
+                       "name":"Mill Road"
+                    },
+                    "city":"Cambridge",
+                    "state":"Cleveland",
+                    "country":"United Kingdom",
+                    "coordinates":{
+                       "latitude":"14.4031",
+                       "longitude":"57.7706"
+                    },
+                    "timezone":{
+                       "offset":"0:00",
+                       "description":"Western Europe Time, London, Lisbon, Casablanca"
+                    }
                 }
-            }
-        """
+            """
     }
 }

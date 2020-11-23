@@ -24,17 +24,20 @@ class PictureTest {
         val response = jsonAdapter.fromJson(PICTURE_JSON) ?: Picture()
 
         assertThat(response.large).isEqualTo("https://randomuser.me/api/portraits/women/30.jpg")
-        assertThat(response.medium).isEqualTo("https://randomuser.me/api/portraits/med/women/30.jpg")
-        assertThat(response.thumbnail).isEqualTo("https://randomuser.me/api/portraits/thumb/women/30.jpg")
+        assertThat(response.medium)
+            .isEqualTo("https://randomuser.me/api/portraits/med/women/30.jpg")
+        assertThat(response.thumbnail)
+            .isEqualTo("https://randomuser.me/api/portraits/thumb/women/30.jpg")
     }
 
     companion object {
-        private const val PICTURE_JSON = """
-            {
-                "large":"https://randomuser.me/api/portraits/women/30.jpg",
-                "medium":"https://randomuser.me/api/portraits/med/women/30.jpg",
-                "thumbnail":"https://randomuser.me/api/portraits/thumb/women/30.jpg"
-            }
-        """
+        private const val PICTURE_JSON =
+            """
+                {
+                    "large":"https://randomuser.me/api/portraits/women/30.jpg",
+                    "medium":"https://randomuser.me/api/portraits/med/women/30.jpg",
+                    "thumbnail":"https://randomuser.me/api/portraits/thumb/women/30.jpg"
+                }
+            """
     }
 }

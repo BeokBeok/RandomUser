@@ -29,12 +29,13 @@ class NameTest {
     }
 
     companion object {
-        private const val NAME_JSON = """
-            {
-                "title":"Mrs",
-                "first":"Kim",
-                "last":"Bradley"
-            }
-        """
+        private const val NAME_JSON =
+            """
+                {
+                    "title":"Mrs",
+                    "first":"Kim",
+                    "last":"Bradley"
+                }
+            """
     }
 }

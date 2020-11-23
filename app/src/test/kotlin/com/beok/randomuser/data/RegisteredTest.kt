@@ -28,11 +28,12 @@ class RegisteredTest {
     }
 
     companion object {
-        private const val REGISTERED_JSON = """
-            {
-                "date":"2016-10-11T20:21:14.933Z",
-                "age":4
-            }
-        """
+        private const val REGISTERED_JSON =
+            """
+                {
+                    "date":"2016-10-11T20:21:14.933Z",
+                    "age":4
+                }
+            """
     }
 }

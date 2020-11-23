@@ -29,13 +29,14 @@ class InfoTest {
     }
 
     companion object {
-        private const val INFO_JSON = """
-            {
-              "seed":"a55a645d68a46915",
-              "results":1,
-              "page":1,
-              "version":"1.3"
-            }
-        """
+        private const val INFO_JSON =
+            """
+                {
+                  "seed":"a55a645d68a46915",
+                  "results":1,
+                  "page":1,
+                  "version":"1.3"
+                }
+            """
     }
 }

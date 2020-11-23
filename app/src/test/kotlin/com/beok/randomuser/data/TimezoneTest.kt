@@ -24,15 +24,17 @@ class TimezoneTest {
         val response = jsonAdapter.fromJson(TIMEZONE_JSON) ?: Timezone()
 
         assertThat(response.offset).isEqualTo("0:00")
-        assertThat(response.description).isEqualTo("Western Europe Time, London, Lisbon, Casablanca")
+        assertThat(response.description)
+            .isEqualTo("Western Europe Time, London, Lisbon, Casablanca")
     }
 
     companion object {
-        private const val TIMEZONE_JSON = """
-            {
-               "offset":"0:00",
-               "description":"Western Europe Time, London, Lisbon, Casablanca"
-            }
-        """
+        private const val TIMEZONE_JSON =
+            """
+                {
+                   "offset":"0:00",
+                   "description":"Western Europe Time, London, Lisbon, Casablanca"
+                }
+            """
     }
 }

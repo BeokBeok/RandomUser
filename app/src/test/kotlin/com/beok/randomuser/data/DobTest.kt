@@ -28,11 +28,12 @@ class DobTest {
     }
 
     companion object {
-        private const val DOB_JSON = """
-            {
-                "date":"1949-10-19T17:12:12.248Z",
-                "age":71
-            }  
-        """
+        private const val DOB_JSON =
+            """
+                {
+                    "date":"1949-10-19T17:12:12.248Z",
+                    "age":71
+                }  
+            """
     }
 }

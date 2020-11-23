@@ -5,12 +5,12 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class Info(
-	@Json(name = "seed")
-	val seed: String = "",
-	@Json(name = "page")
-	val page: Int = -1,
-	@Json(name = "results")
-	val results: Int = -1,
-	@Json(name = "version")
-	val version: String = ""
+    @Json(name = "seed")
+    val seed: String = "",
+    @Json(name = "page")
+    val page: Int = -1,
+    @Json(name = "results")
+    val results: Int = -1,
+    @Json(name = "version")
+    val version: String = ""
 )

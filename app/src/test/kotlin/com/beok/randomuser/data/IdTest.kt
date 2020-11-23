@@ -28,11 +28,12 @@ class IdTest {
     }
 
     companion object {
-        private const val ID_JSON = """
-            {
-                "name":"NINO",
-                "value":"KE 47 46 34 N"
-            }  
-        """
+        private const val ID_JSON =
+            """
+                {
+                    "name":"NINO",
+                    "value":"KE 47 46 34 N"
+                }  
+            """
     }
 }
