@@ -4,11 +4,14 @@ object Version {
 }
 
 object ProjectConfig {
+    const val MAVEN_URL = "https://plugins.gradle.org/m2/"
+
     const val GRADLE = "com.android.tools.build:gradle:4.2.0-alpha16"
     const val KOTLIN_GRADLE_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Version.KOTLIN}"
     const val ANDROID_JUNIT5 = "de.mannodermaus.gradle.plugins:android-junit5:1.6.2.0"
     const val HILT_ANDROID_GRADLE_PLUGIN =
         "com.google.dagger:hilt-android-gradle-plugin:${Version.HILT}"
+    const val KTLINT_GRADLE = "org.jlleitschuh.gradle:ktlint-gradle:9.4.1"
 }
 
 object AndroidConfig {
