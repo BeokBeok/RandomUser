@@ -3,6 +3,7 @@
     package="com.beok.randomuser">
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="false"
         android:fullBackupContent="false"
         android:icon="@mipmap/ic_launcher"
