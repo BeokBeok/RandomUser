@@ -73,3 +73,10 @@ object LifecycleConfig {
     const val LIFECYCLE_EXT = "androidx.lifecycle:lifecycle-extensions:$LIFECYCLE_VER"
     const val LIFECYCLE_VIEWMODEL_KTX = "androidx.lifecycle:lifecycle-viewmodel-ktx:$LIFECYCLE_VER"
 }
+
+object StethoConfig {
+    private const val STETHO_VER = "1.5.1"
+
+    const val STETHO = "com.facebook.stetho:stetho:$STETHO_VER"
+    const val STETHO_OKHTTP = "com.facebook.stetho:stetho-okhttp3:$STETHO_VER"
+}

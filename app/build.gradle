@@ -70,6 +70,9 @@ dependencies {
     implementation LifecycleConfig.LIFECYCLE_EXT
     implementation LifecycleConfig.LIFECYCLE_VIEWMODEL_KTX
 
+    implementation StethoConfig.STETHO
+    implementation StethoConfig.STETHO_OKHTTP
+
     testImplementation TestConfig.JUNIT_JUPITER_API
     testRuntimeOnly TestConfig.JUNIT_JUPITER_ENGINE
     testImplementation TestConfig.JUNIT_JUPITER_PARAMS
