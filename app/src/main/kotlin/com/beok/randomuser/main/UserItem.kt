@@ -8,7 +8,7 @@ data class UserItem(val imageUrl: String, val name: String) {
 
         fun toItem(resultsItem: ResultsItem) = UserItem(
             imageUrl = resultsItem.picture.thumbnail,
-            name = "${resultsItem.name.title}${resultsItem.name.first}${resultsItem.name.last}"
+            name = "${resultsItem.name.title} ${resultsItem.name.first} ${resultsItem.name.last}"
         )
     }
 }
