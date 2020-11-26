@@ -2,6 +2,7 @@ package com.beok.randomuser.di
 
 import com.beok.randomuser.BuildConfig
 import com.beok.randomuser.domain.RandomUserService
+import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -31,6 +32,10 @@ class NetworkModule {
 
     @Provides
     @Singleton
+    fun provideStethoInterceptor() = StethoInterceptor()
+
+    @Provides
+    @Singleton
     fun provideKotlinJsonAdapterFactory() = KotlinJsonAdapterFactory()
 
     @Provides
@@ -47,9 +52,13 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun provideOkHttpClient(loggingInterceptor: HttpLoggingInterceptor): OkHttpClient =
+    fun provideOkHttpClient(
+        loggingInterceptor: HttpLoggingInterceptor,
+        stethoInterceptor: StethoInterceptor
+    ): OkHttpClient =
         OkHttpClient.Builder()
             .addInterceptor(loggingInterceptor)
+            .addInterceptor(stethoInterceptor)
             .build()
 
     @Provides
