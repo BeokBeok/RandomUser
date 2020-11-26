@@ -40,7 +40,7 @@ task jacocoTestReport(type: JacocoReport, dependsOn: 'testDebugUnitTest') {
                     '**/*ViewHolder*.*',
                     '**/*Module*.*',
                     '**/*Application*.*',
-                    '**/*ViewExt.*'
+                    '**/*ViewExt*.*'
             ]
     )
     executionData.from = files("$buildDir/jacoco/testDebugUnitTest.exec")
