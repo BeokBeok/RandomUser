@@ -63,6 +63,9 @@ dependencies {
     implementation ConverterConfig.MOSHI_KOTLIN
     kapt ConverterConfig.MOSHI_KOTLIN_CODEGEN
 
+    implementation LifecycleConfig.LIFECYCLE_EXT
+    implementation LifecycleConfig.LIFECYCLE_VIEWMODEL_KTX
+
     testImplementation TestConfig.JUNIT_JUPITER_API
     testRuntimeOnly TestConfig.JUNIT_JUPITER_ENGINE
     testImplementation TestConfig.JUNIT_JUPITER_PARAMS
