@@ -6,6 +6,7 @@ import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
+import java.io.BufferedReader
 
 class RandomUserResponseTest {
 
@@ -25,6 +26,20 @@ class RandomUserResponseTest {
 
         assertThat(response.results.size).isEqualTo(1)
         assertThat(response.info.results).isEqualTo(1)
+    }
+
+    @Test
+    fun `json 파일을 읽어와서 엔티티로 변환합니다`() {
+        val json = javaClass.classLoader
+            ?.getResourceAsStream("api-response/1.json")
+            ?.bufferedReader()
+            ?.use(BufferedReader::readText)
+            ?: ""
+
+        val response = jsonAdapter.fromJson(json) ?: RandomUserResponse()
+
+        assertThat(response.results.size).isEqualTo(30)
+        assertThat(response.info.results).isEqualTo(30)
     }
 
     companion object {

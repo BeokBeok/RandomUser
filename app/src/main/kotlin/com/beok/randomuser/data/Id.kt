@@ -8,5 +8,5 @@ data class Id(
     @Json(name = "name")
     val name: String = "",
     @Json(name = "value")
-    val value: String = ""
+    val value: String? = null
 )
