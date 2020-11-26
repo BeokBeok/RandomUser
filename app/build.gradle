@@ -53,6 +53,7 @@ dependencies {
     implementation Dependencies.MATERIAL
     implementation Dependencies.CONSTRAINT_LAYOUT
     implementation Dependencies.COROUTINES
+    implementation Dependencies.ACTIVITY_EXT
 
     implementation NetworkConfig.RETROFIT
     implementation NetworkConfig.LOGGING_INTERCEPTOR

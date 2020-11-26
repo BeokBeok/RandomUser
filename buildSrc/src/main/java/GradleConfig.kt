@@ -29,6 +29,7 @@ object Dependencies {
     const val MATERIAL = "com.google.android.material:material:1.1.0"
     const val CONSTRAINT_LAYOUT = "androidx.constraintlayout:constraintlayout:2.0.1"
     const val COROUTINES = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1"
+    const val ACTIVITY_EXT = "androidx.activity:activity-ktx:1.2.0-beta01"
 }
 
 object TestConfig {
