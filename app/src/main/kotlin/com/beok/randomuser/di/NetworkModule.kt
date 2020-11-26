@@ -76,6 +76,6 @@ class NetworkModule {
         retrofit.create(RandomUserService::class.java)
 
     companion object {
-        private const val BASE_URL = "https://randomuser.me/api/"
+        private const val BASE_URL = "https://randomuser.me/"
     }
 }
