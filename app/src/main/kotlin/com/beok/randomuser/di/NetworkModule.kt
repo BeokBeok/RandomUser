@@ -58,7 +58,7 @@ class NetworkModule {
     ): OkHttpClient =
         OkHttpClient.Builder()
             .addInterceptor(loggingInterceptor)
-            .addInterceptor(stethoInterceptor)
+            .addNetworkInterceptor(stethoInterceptor)
             .build()
 
     @Provides
