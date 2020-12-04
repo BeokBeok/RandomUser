@@ -81,4 +81,5 @@ dependencies {
     testImplementation TestConfig.JUNIT_JUPITER_PARAMS
     testImplementation TestConfig.ASSERTJ_CORE
     testImplementation TestConfig.MOCKK
+    testImplementation TestConfig.CORE_TESTING
 }

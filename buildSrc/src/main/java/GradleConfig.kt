@@ -40,6 +40,7 @@ object TestConfig {
     const val JUNIT_JUPITER_PARAMS = "org.junit.jupiter:junit-jupiter-params:$JUNIT_VERSION"
     const val ASSERTJ_CORE = "org.assertj:assertj-core:3.18.0"
     const val MOCKK = "io.mockk:mockk:1.10.2"
+    const val CORE_TESTING = "androidx.arch.core:core-testing:2.1.0"
 }
 
 object NetworkConfig {
