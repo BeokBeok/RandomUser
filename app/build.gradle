@@ -18,7 +18,8 @@ android {
         versionCode AndroidConfig.VERSION_CODE
         versionName AndroidConfig.VERSION_NAME
 
-        testInstrumentationRunner AndroidConfig.TEST_INSTRUMENTATION_RUNNER
+        testInstrumentationRunner AndroidConfig.ANDROID_JUNIT_RUNNER
+        testInstrumentationRunnerArgument AndroidConfig.RUNNER_BUILDER, AndroidConfig.ANDROID_JUNIT5_BUILDER
     }
 
     buildTypes {
@@ -49,6 +50,9 @@ android {
     }
     testOptions {
         unitTests.returnDefaultValues = true
+    }
+    packagingOptions {
+        exclude "META-INF/LICENSE*"
     }
 }
 
@@ -86,5 +90,12 @@ dependencies {
     testImplementation TestConfig.ASSERTJ_CORE
     testImplementation TestConfig.MOCKK
     testImplementation TestConfig.CORE_TESTING
+
+    androidTestImplementation TestConfig.TEST_RUNNER
+    androidTestImplementation TestConfig.JUNIT_JUPITER_API
+    androidTestImplementation TestConfig.ANDROID_TEST_CORE
+    androidTestRuntimeOnly TestConfig.ANDROID_TEST_RUNNER
+    androidTestImplementation TestConfig.ASSERTJ_CORE
     androidTestImplementation TestConfig.ROOM_TESTING
+    androidTestImplementation TestConfig.CORE
 }

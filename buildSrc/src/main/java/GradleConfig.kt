@@ -21,7 +21,9 @@ object AndroidConfig {
     const val MIN_SDK = 23
     const val VERSION_CODE = 1
     const val VERSION_NAME = "1.0.0"
-    const val TEST_INSTRUMENTATION_RUNNER = "androidx.test.runner.AndroidJUnitRunner"
+    const val ANDROID_JUNIT_RUNNER = "androidx.test.runner.AndroidJUnitRunner"
+    const val RUNNER_BUILDER = "runnerBuilder"
+    const val ANDROID_JUNIT5_BUILDER = "de.mannodermaus.junit5.AndroidJUnit5Builder"
 }
 
 object Dependencies {
@@ -43,6 +45,11 @@ object TestConfig {
     const val MOCKK = "io.mockk:mockk:1.10.2"
     const val CORE_TESTING = "androidx.arch.core:core-testing:2.1.0"
     const val ROOM_TESTING = "androidx.room:room-testing:${Version.ROOM}"
+    const val CORE = "androidx.test:core:1.3.0"
+    const val EXT_JUNIT = "androidx.test.ext:junit:1.1.2"
+    const val TEST_RUNNER = "androidx.test:runner:1.3.0"
+    const val ANDROID_TEST_CORE = "de.mannodermaus.junit5:android-test-core:1.2.0"
+    const val ANDROID_TEST_RUNNER = "de.mannodermaus.junit5:android-test-runner:1.2.0"
 }
 
 object NetworkConfig {
