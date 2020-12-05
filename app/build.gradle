@@ -85,4 +85,5 @@ dependencies {
     testImplementation TestConfig.ASSERTJ_CORE
     testImplementation TestConfig.MOCKK
     testImplementation TestConfig.CORE_TESTING
+    androidTestImplementation TestConfig.ROOM_TESTING
 }

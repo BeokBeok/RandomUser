@@ -1,6 +1,7 @@
 object Version {
     const val KOTLIN = "1.4.10"
     const val HILT = "2.29.1-alpha"
+    const val ROOM = "2.3.0-alpha03"
 }
 
 object ProjectConfig {
@@ -41,6 +42,7 @@ object TestConfig {
     const val ASSERTJ_CORE = "org.assertj:assertj-core:3.18.0"
     const val MOCKK = "io.mockk:mockk:1.10.2"
     const val CORE_TESTING = "androidx.arch.core:core-testing:2.1.0"
+    const val ROOM_TESTING = "androidx.room:room-testing:${Version.ROOM}"
 }
 
 object NetworkConfig {
@@ -83,8 +85,6 @@ object StethoConfig {
 }
 
 object RoomConfig {
-    private const val ROOM_VER = "2.3.0-alpha03"
-
-    const val ROOM_KTX = "androidx.room:room-ktx:$ROOM_VER"
-    const val ROOM_COMPILER = "androidx.room:room-compiler:$ROOM_VER"
+    const val ROOM_KTX = "androidx.room:room-ktx:${Version.ROOM}"
+    const val ROOM_COMPILER = "androidx.room:room-compiler:${Version.ROOM}"
 }
