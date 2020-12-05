@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.beok.randomuser.domain.RandomUserRepository
+import com.beok.randomuser.data.RandomUserRepository
 import kotlinx.coroutines.launch
 
 class MainViewModel @ViewModelInject constructor(

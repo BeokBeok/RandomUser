@@ -1,8 +1,8 @@
 package com.beok.randomuser.main
 
 import com.beok.randomuser.InstantExecutorExtension
-import com.beok.randomuser.data.ResultsItem
-import com.beok.randomuser.domain.RandomUserRepository
+import com.beok.randomuser.data.RandomUserRepository
+import com.beok.randomuser.data.entity.ResultsItem
 import com.beok.randomuser.getOrAwaitValue
 import io.mockk.coEvery
 import io.mockk.mockk

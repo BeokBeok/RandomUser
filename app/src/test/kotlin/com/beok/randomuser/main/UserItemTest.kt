@@ -1,8 +1,8 @@
 package com.beok.randomuser.main
 
-import com.beok.randomuser.data.Name
-import com.beok.randomuser.data.Picture
-import com.beok.randomuser.data.ResultsItem
+import com.beok.randomuser.data.entity.Name
+import com.beok.randomuser.data.entity.Picture
+import com.beok.randomuser.data.entity.ResultsItem
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 

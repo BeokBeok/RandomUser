@@ -1,6 +1,6 @@
 package com.beok.randomuser.main
 
-import com.beok.randomuser.data.ResultsItem
+import com.beok.randomuser.data.entity.ResultsItem
 
 data class UserItem(val imageUrl: String, val name: String) {
 
