@@ -1,6 +1,8 @@
 package com.beok.randomuser.data
 
 import com.beok.randomuser.data.entity.RandomUserResponse
+import com.beok.randomuser.data.entity.RandomUserTable
+import com.beok.randomuser.data.entity.ResultsItem
 import com.beok.randomuser.data.source.local.RandomUserLocalDataSource
 import com.beok.randomuser.data.source.remote.RandomUserRemoteDataSource
 import kotlinx.coroutines.CoroutineDispatcher
@@ -16,6 +18,13 @@ class RandomUserRepository @Inject constructor(
 
     suspend fun fetchUsers(numberOfUser: Int): Result<RandomUserResponse> =
         withContext(ioDispatcher) {
-            runCatching { remoteDataSource.fetchUsers(numberOfUser) }
+            runCatching {
+                remoteDataSource.fetchUsers(numberOfUser)
+            }
+        }
+
+    suspend fun insertUsers(resultsItems: List<ResultsItem>) =
+        withContext(ioDispatcher) {
+            localDataSource.insert(resultsItems.map(RandomUserTable::mapToTable))
         }
 }

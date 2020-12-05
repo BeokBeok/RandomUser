@@ -7,4 +7,11 @@ import androidx.room.PrimaryKey
 data class RandomUserTable(
     @PrimaryKey
     val name: String
-)
+) {
+
+    companion object {
+        fun mapToTable(resultsItem: ResultsItem) = RandomUserTable(
+            name = "${resultsItem.name.title} ${resultsItem.name.first} ${resultsItem.name.last}"
+        )
+    }
+}
