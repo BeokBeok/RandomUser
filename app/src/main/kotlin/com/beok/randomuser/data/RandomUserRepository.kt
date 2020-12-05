@@ -1,7 +1,7 @@
 package com.beok.randomuser.data
 
 import com.beok.randomuser.data.entity.RandomUserResponse
-import com.beok.randomuser.data.source.RandomUserRemoteDataSource
+import com.beok.randomuser.data.source.remote.RandomUserRemoteDataSource
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

@@ -1,7 +1,7 @@
 package com.beok.randomuser.di
 
 import com.beok.randomuser.BuildConfig
-import com.beok.randomuser.data.source.RandomUserService
+import com.beok.randomuser.data.source.remote.RandomUserService
 import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory

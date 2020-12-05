@@ -1,9 +1,9 @@
 package com.beok.randomuser.di
 
 import com.beok.randomuser.data.RandomUserRepository
-import com.beok.randomuser.data.source.RandomUserRemoteDataSource
-import com.beok.randomuser.data.source.RandomUserRemoteDataSourceImpl
-import com.beok.randomuser.data.source.RandomUserService
+import com.beok.randomuser.data.source.remote.RandomUserRemoteDataSource
+import com.beok.randomuser.data.source.remote.RandomUserRemoteDataSourceImpl
+import com.beok.randomuser.data.source.remote.RandomUserService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,4 +1,4 @@
-package com.beok.randomuser.data.source
+package com.beok.randomuser.data.source.remote
 
 import com.beok.randomuser.data.entity.RandomUserResponse
 import retrofit2.http.GET

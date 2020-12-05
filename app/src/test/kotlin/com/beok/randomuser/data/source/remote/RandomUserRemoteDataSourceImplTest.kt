@@ -1,4 +1,4 @@
-package com.beok.randomuser.data.source
+package com.beok.randomuser.data.source.remote
 
 import io.mockk.coVerify
 import io.mockk.mockk
