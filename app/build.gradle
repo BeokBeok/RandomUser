@@ -76,6 +76,9 @@ dependencies {
     implementation StethoConfig.STETHO
     implementation StethoConfig.STETHO_OKHTTP
 
+    implementation RoomConfig.ROOM_KTX
+    kapt RoomConfig.ROOM_COMPILER
+
     testImplementation TestConfig.JUNIT_JUPITER_API
     testRuntimeOnly TestConfig.JUNIT_JUPITER_ENGINE
     testImplementation TestConfig.JUNIT_JUPITER_PARAMS

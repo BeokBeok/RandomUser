@@ -81,3 +81,10 @@ object StethoConfig {
     const val STETHO = "com.facebook.stetho:stetho:$STETHO_VER"
     const val STETHO_OKHTTP = "com.facebook.stetho:stetho-okhttp3:$STETHO_VER"
 }
+
+object RoomConfig {
+    private const val ROOM_VER = "2.3.0-alpha03"
+
+    const val ROOM_KTX = "androidx.room:room-ktx:$ROOM_VER"
+    const val ROOM_COMPILER = "androidx.room:room-compiler:$ROOM_VER"
+}
