@@ -6,7 +6,8 @@ import com.beok.randomuser.data.entity.RandomUserTable
 
 @Database(
     entities = [RandomUserTable::class],
-    version = 1
+    version = 1,
+    exportSchema = false
 )
 abstract class RandomUserDatabase : RoomDatabase() {
 
