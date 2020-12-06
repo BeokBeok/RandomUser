@@ -19,7 +19,7 @@ class RandomUserDaoTest : RandomUserDatabaseTest() {
 
     @Test
     fun writeUserAndRead() = runBlocking {
-        randomUserDao.insert(RandomUserTable(NAME))
+        randomUserDao.insert(RandomUserTable(NAME, GENDER))
         val user = randomUserDao.findUserByName(NAME)
 
         assertEquals(user.name, NAME)
@@ -27,5 +27,6 @@ class RandomUserDaoTest : RandomUserDatabaseTest() {
 
     companion object {
         private const val NAME = "name"
+        private const val GENDER = "gender"
     }
 }
