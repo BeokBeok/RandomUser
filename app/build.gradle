@@ -20,6 +20,12 @@ android {
 
         testInstrumentationRunner AndroidConfig.ANDROID_JUNIT_RUNNER
         testInstrumentationRunnerArgument AndroidConfig.RUNNER_BUILDER, AndroidConfig.ANDROID_JUNIT5_BUILDER
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
     }
 
     buildTypes {
@@ -40,19 +46,18 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
         test.java.srcDirs += 'src/test/kotlin'
         androidTest.java.srcDirs += 'src/androidTest/kotlin'
+        androidTest.assets.srcDirs += files("$projectDir/schemas".toString())
     }
     packagingOptions {
         exclude 'META-INF/metadata.kotlin_module'
         exclude 'META-INF/metadata.jvm.kotlin_module'
+        exclude "META-INF/LICENSE*"
     }
     buildFeatures {
         dataBinding true
     }
     testOptions {
         unitTests.returnDefaultValues = true
-    }
-    packagingOptions {
-        exclude "META-INF/LICENSE*"
     }
 }
 
