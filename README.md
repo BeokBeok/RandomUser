@@ -20,3 +20,6 @@
 # CD
 - Upload artifact
 - Deploy slack channel
+
+# GitHook
+- ktlint
