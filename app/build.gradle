@@ -59,6 +59,11 @@ android {
     testOptions {
         unitTests.returnDefaultValues = true
     }
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            output.outputFileName = output.outputFile.name.replace(".apk", "-${variant.versionName}.apk")
+        }
+    }
 }
 
 dependencies {
