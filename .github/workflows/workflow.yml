@@ -43,7 +43,7 @@ jobs:
       - name: Setting an environment variable
         run: |
           export VERSION_NAME=`egrep '^[[:blank:]]+const val VERSION_NAME[[:blank:]]'  buildSrc/src/main/java/GradleConfig.kt | awk '{print $5}' | sed s/\"//g`
-          echo "DEBUG_APK=app-debug-$VERSION_NAME$(GITHUB_RUN_ID).apk" >> $GITHUB_ENV
+          echo "DEBUG_APK=app-debug-${VERSION_NAME}.apk" >> $GITHUB_ENV
 
       - name: Deploy APK in Slack
         run: |
