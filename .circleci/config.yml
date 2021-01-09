@@ -27,20 +27,16 @@ jobs:
 #          name: Upload coverage report
 #          command: |
 #            bash <(curl -s https://codecov.io/bash)
-      - run:
-          name: Setting an environment variable
-          command: |
-            export VERSION_NAME=$(egrep '^[[:blank:]]+const val VERSION_NAME[[:blank:]]'  buildSrc/src/main/java/GradleConfig.kt | awk '{print $5}' | sed s/\"//g)
-            export TEST=1.1.1
-            export TEST1=a-b-${TEST}.apk
-            echo 'export TEST2=${TEST1}' >> $BASH_ENV
+#      - run:
+#          name: Setting an environment variable
+#          command: |
+#            export VERSION_NAME=$(egrep '^[[:blank:]]+const val VERSION_NAME[[:blank:]]'  buildSrc/src/main/java/GradleConfig.kt | awk '{print $5}' | sed s/\"//g)
 #            echo 'export DEBUG_APK=app-debug-${VERSION_NAME}.apk' >> $BASH_ENV
 #            echo 'export SLACK_DEPLOY_CHANNEL=test-study' >> $BASH_ENV
       - run:
           name: Confirm environment variable
           command: |
             echo $VERSION_NAME
-            echo $TEST2
 #            echo $DEBUG_APK
 #            echo $SLACK_DEPLOY_CHANNEL
 #      - run:
