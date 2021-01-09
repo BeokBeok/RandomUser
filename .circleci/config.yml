@@ -30,13 +30,13 @@ jobs:
       - run:
           name: Setting an environment variable
           command: |
-            echo 'export VERSION_NAME=`egrep '^[[:blank:]]+const val VERSION_NAME[[:blank:]]'  buildSrc/src/main/java/GradleConfig.kt | awk '{print $5}' | sed s/\"//g`' >> $BASH_ENV
+            echo 'export VERSION_NAME=$(egrep '^[[:blank:]]+const val VERSION_NAME[[:blank:]]'  buildSrc/src/main/java/GradleConfig.kt | awk '{print $5}' | sed s/\"//g)' >> $BASH_ENV
             echo 'export DEBUG_APK=app-debug-${VERSION_NAME}.apk' >> $BASH_ENV
             echo 'export SLACK_DEPLOY_CHANNEL=test-study' >> $BASH_ENV
       - run:
           name: Confirm environment variable
           command: |
-            echo $VERSION_NAME
+            echo ${VERSION_NAME}
             echo $DEBUG_APK
             echo $SLACK_DEPLOY_CHANNEL
 #      - run:
