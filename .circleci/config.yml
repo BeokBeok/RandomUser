@@ -1,6 +1,9 @@
 version: 2
 jobs:
   build:
+    filters:
+      branches:
+        only: main
     working_directory: ~/code
     docker:
       - image: circleci/android:api-30
@@ -8,32 +11,32 @@ jobs:
       JVM_OPTS: -Xmx3200m
     steps:
       - checkout
-      - restore_cache:
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
-      - run:
-          name: Download Dependencies
-          command: ./gradlew androidDependencies
-      - save_cache:
-          paths:
-            - ~/.gradle
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
-      - run:
-          name: Build Project
-          command: ./gradlew assemble
-      - run:
-          name: Run JaCoCo
-          command: ./gradlew jacocoTestReport
-      - run:
-          name: Upload coverage report
-          command: |
-            bash <(curl -s https://codecov.io/bash)
-      - run:
-          name: Setting an environment variable
-          command: |
-            echo "export VERSION_NAME=$(egrep '^[[:blank:]]+const val VERSION_NAME[[:blank:]]'  buildSrc/src/main/java/GradleConfig.kt | awk '{print $5}' | sed s/\"//g)" >> $BASH_ENV
-            echo 'export DEBUG_APK=app-debug-${VERSION_NAME}.apk' >> $BASH_ENV
-            echo 'export SLACK_DEPLOY_CHANNEL=test-study' >> $BASH_ENV
-      - run:
-          name: Deploy APK in Slack
-          command: |
-            curl https://slack.com/api/files.upload -F token=$SLACK_TOKEN -F channels=$SLACK_DEPLOY_CHANNEL -F title=$DEBUG_APK -F filename=$DEBUG_APK -F file="@app/build/outputs/apk/debug/$DEBUG_APK"
+#      - restore_cache:
+#          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+#      - run:
+#          name: Download Dependencies
+#          command: ./gradlew androidDependencies
+#      - save_cache:
+#          paths:
+#            - ~/.gradle
+#          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+#      - run:
+#          name: Build Project
+#          command: ./gradlew assemble
+#      - run:
+#          name: Run JaCoCo
+#          command: ./gradlew jacocoTestReport
+#      - run:
+#          name: Upload coverage report
+#          command: |
+#            bash <(curl -s https://codecov.io/bash)
+#      - run:
+#          name: Setting an environment variable
+#          command: |
+#            echo "export VERSION_NAME=$(egrep '^[[:blank:]]+const val VERSION_NAME[[:blank:]]'  buildSrc/src/main/java/GradleConfig.kt | awk '{print $5}' | sed s/\"//g)" >> $BASH_ENV
+#            echo 'export DEBUG_APK=app-debug-${VERSION_NAME}.apk' >> $BASH_ENV
+#            echo 'export SLACK_DEPLOY_CHANNEL=test-study' >> $BASH_ENV
+#      - run:
+#          name: Deploy APK in Slack
+#          command: |
+#            curl https://slack.com/api/files.upload -F token=$SLACK_TOKEN -F channels=$SLACK_DEPLOY_CHANNEL -F title=$DEBUG_APK -F filename=$DEBUG_APK -F file="@app/build/outputs/apk/debug/$DEBUG_APK"
