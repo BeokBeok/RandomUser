@@ -7,7 +7,7 @@ jobs:
     environment:
       JVM_OPTS: -Xmx3200m
     steps:
-      - checkout
+#      - checkout
 #      - restore_cache:
 #          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
 #      - run:
@@ -36,7 +36,7 @@ jobs:
       - run:
           name: Confirm environment variable
           command: |
-            echo $VERSION_NAME
+            echo $VERSION
 #            echo $DEBUG_APK
 #            echo $SLACK_DEPLOY_CHANNEL
 #      - run:
