@@ -1,14 +1,14 @@
 version: 2
 jobs:
   build:
-    filters:
-      branches:
-        only: main
     working_directory: ~/code
     docker:
       - image: circleci/android:api-30
     environment:
       JVM_OPTS: -Xmx3200m
+    branches:
+      only:
+        - main
     steps:
       - checkout
       - restore_cache:
