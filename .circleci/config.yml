@@ -36,7 +36,7 @@ jobs:
       - run:
           name: Confirm environment variable
           command: |
-            echo ${VERSION_NAME}
+            echo $VERSION_NAME
 #            echo $DEBUG_APK
 #            echo $SLACK_DEPLOY_CHANNEL
 #      - run:
