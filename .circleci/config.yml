@@ -36,4 +36,4 @@ jobs:
       - run:
           name: Deploy APK in Slack
           command: |
-            curl https://slack.com/api/files.upload -F token=${{ secrets.SLACK_TOKEN }} -F channels=$SLACK_DEPLOY_CHANNEL -F title=$DEBUG_APK -F filename=$DEBUG_APK -F file="@app/build/outputs/apk/debug/$DEBUG_APK"
+            curl https://slack.com/api/files.upload -F token=$SLACK_TOKEN -F channels=$SLACK_DEPLOY_CHANNEL -F title=$DEBUG_APK -F filename=$DEBUG_APK -F file="@app/build/outputs/apk/debug/$DEBUG_APK"
