@@ -11,7 +11,7 @@
 - Repository Test
 - ViewModel Test
 
-# CI (Github Action)
+# CI (Github Action, CircleCI)
 - Build Project
 - Run JaCoCo
 - Upload CodeCov
