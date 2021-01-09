@@ -32,7 +32,8 @@ jobs:
           command: |
             export VERSION_NAME=`egrep '^[[:blank:]]+const val VERSION_NAME[[:blank:]]'  buildSrc/src/main/java/GradleConfig.kt | awk '{print $5}' | sed s/\"//g`
             echo `export DEBUG_APK=app-debug-${VERSION_NAME}.apk` >> $BASH_ENV
+            echo `export SLACK_DEPLOY_CHANNEL=test-study` >> $BASH_ENV
       - run:
           name: Deploy APK in Slack
           command: |
-            curl https://slack.com/api/files.upload -F token=${{ secrets.SLACK_TOKEN }} -F channels="test-study" -F title=$DEBUG_APK -F filename=$DEBUG_APK -F file="@app/build/outputs/apk/debug/$DEBUG_APK"
+            curl https://slack.com/api/files.upload -F token=${{ secrets.SLACK_TOKEN }} -F channels=$SLACK_DEPLOY_CHANNEL -F title=$DEBUG_APK -F filename=$DEBUG_APK -F file="@app/build/outputs/apk/debug/$DEBUG_APK"
