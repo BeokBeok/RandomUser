@@ -20,7 +20,7 @@ object AndroidConfig {
     const val APP_ID = "com.beok.randomuser"
     const val MIN_SDK = 23
     const val VERSION_CODE = 1
-    const val VERSION_NAME = "1.2.3"
+    const val VERSION_NAME = "1.3.0"
     const val ANDROID_JUNIT_RUNNER = "androidx.test.runner.AndroidJUnitRunner"
     const val RUNNER_BUILDER = "runnerBuilder"
     const val ANDROID_JUNIT5_BUILDER = "de.mannodermaus.junit5.AndroidJUnit5Builder"
