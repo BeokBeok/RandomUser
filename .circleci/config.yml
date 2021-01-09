@@ -36,9 +36,9 @@ jobs:
       - run:
           name: Confirm environment variable
           command: |
-            echo $DEBUG_APK
-            echo $SLACK_DEPLOY_CHANNEL
-            echo $SLACK_TOKEN
+            echo ${DEBUG_APK}
+            echo ${SLACK_DEPLOY_CHANNEL}
+            echo ${SLACK_TOKEN}
       - run:
           name: Deploy APK in Slack
           command: |
