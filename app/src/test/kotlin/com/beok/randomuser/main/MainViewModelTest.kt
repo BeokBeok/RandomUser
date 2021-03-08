@@ -34,6 +34,6 @@ class MainViewModelTest {
 
         viewModel.fetchUsers(1)
 
-        assertEquals(viewModel.users.getOrAwaitValue(), mockResponse.map(UserItem::toItem))
+        assertEquals(viewModel.users.value, mockResponse.map(UserItem::toItem))
     }
 }
