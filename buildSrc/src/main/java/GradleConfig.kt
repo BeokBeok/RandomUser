@@ -48,7 +48,7 @@ object TestConfig {
     const val CORE = "androidx.test:core:1.3.0"
     const val EXT_JUNIT = "androidx.test.ext:junit:1.1.2"
     const val TEST_RUNNER = "androidx.test:runner:1.3.0"
-    const val ANDROID_TEST_CORE = "de.mannodermaus.junit5:android-test-core:1.2.0"
+    const val ANDROID_TEST_CORE = "de.mannodermaus.junit5:android-test-core:1.2.2"
     const val ANDROID_TEST_RUNNER = "de.mannodermaus.junit5:android-test-runner:1.2.0"
 }
 
@@ -85,7 +85,7 @@ object LifecycleConfig {
 }
 
 object StethoConfig {
-    private const val STETHO_VER = "1.5.1"
+    private const val STETHO_VER = "1.6.0"
 
     const val STETHO = "com.facebook.stetho:stetho:$STETHO_VER"
     const val STETHO_OKHTTP = "com.facebook.stetho:stetho-okhttp3:$STETHO_VER"
