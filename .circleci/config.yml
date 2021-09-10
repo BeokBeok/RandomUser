@@ -34,3 +34,11 @@ jobs:
 #            curl https://slack.com/api/files.upload -F token=$SLACK_TOKEN -F channels=$SLACK_DEPLOY_CHANNEL -F title=$DEBUG_APK -F filename=$DEBUG_APK -F file="@app/build/outputs/apk/debug/$DEBUG_APK"
       - android/save-gradle-cache
       - android/save-build-cache
+
+workflows:
+  build-and-test:
+    jobs:
+      - build:
+        filters:
+          branches:
+            only: develop
