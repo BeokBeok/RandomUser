@@ -1,25 +1,22 @@
-version: 2
+version: 2.1
+
+orbs:
+  android: circleci/android@1.0.3
+
 jobs:
   build:
-    working_directory: ~/code
-    docker:
-      - image: circleci/android:api-30
-    environment:
-      JVM_OPTS: -Xmx3200m
+    executor:
+      name: android/android-machine
+      resource-class: xlarge
     branches:
       only:
-        - main
+        - develop
     steps:
       - checkout
-      - restore_cache:
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
-      - run:
-          name: Download Dependencies
-          command: ./gradlew androidDependencies
-      - save_cache:
-          paths:
-            - ~/.gradle
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+      - android/restore-gradle-cache
+      - android/restore-build-cache
+      - android/save-gradle-cache
+      - android/save-build-cache
       - run:
           name: Build Project
           command: ./gradlew assemble
