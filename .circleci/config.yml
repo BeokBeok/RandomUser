@@ -8,9 +8,6 @@ jobs:
     executor:
       name: android/android-machine
       resource-class: xlarge
-    branches:
-      only:
-        - develop
     steps:
       - checkout
       - android/restore-gradle-cache
