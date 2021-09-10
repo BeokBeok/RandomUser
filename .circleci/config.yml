@@ -8,8 +8,13 @@ jobs:
     executor:
       name: android/android-machine
       resource-class: xlarge
+    environment:
+      JVM_OPTS: -Xmx4096m
     steps:
       - checkout
+      - run:
+          name: Download Dependencies
+          command: ./gradlew androidDependencies
       - android/restore-gradle-cache
       - android/restore-build-cache
       - run:
