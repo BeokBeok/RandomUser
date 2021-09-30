@@ -17,7 +17,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_main_content"
-            bind_recyclerView_replaceItem="@{viewModel.users}"
+            bind_recyclerView_replaceItem="@{viewModel.users.value}"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
